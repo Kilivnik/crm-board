@@ -1,62 +1,85 @@
-<header class="header">
+<header class="header__container">
     <!-- Логотип  -->
-    <div class="header__container">
+    
         <a class="header__logo" href="./index.html">
-            <img src="./images/svg/header-icon.svg" alt="Company Logo" width="37" height="37">
+            <svg width="37" height="37"> 
+                <use href="./images/symbol-defs.svg#icon-header-icon"></use>
+            </svg>
             <h1 class="header__title">Dashboard</h1>
             <p class="header__span">v.01</p>
         </a>
 
 
-        <!-- Бокова панель -->
-        <nav class="nav__wrapper">
+        
+         <nav class="nav__wrapper">
             <ul class="header__list">
                 <li class="header__nav">
                     <a href="#1" class="header__item">
-                        <img src="./images/svg/dashboard.svg" alt="Dashboard">
+                        <svg class="header__icon" width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-dashboard"></use>
+                        </svg>
                         <span>Dashboard</span>
-                        <img src="./images/svg/arrow.svg" alt="Show more">
                     </a>
                 </li>
                 <li class="header__nav">
                     <a href="#2" class="header__item">
-                        <img src="./images/svg/product.svg" alt="Product">
+                        <svg class="header__icon" width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-product"></use>
+                        </svg>
                         <span>Product</span>
-                        <img src="./images/svg/arrow.svg" alt="Show more">
+                        <svg class="header__icon arrow" width="16" height="16">
+                            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                        </svg>
                     </a>
                 </li>
                 <li class="header__nav">
                     <a href="#3" class="header__item">
-                        <img src="./images/svg/customers.svg" alt="Customers">
+                        <svg class="header__icon" width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-customers"></use>
+                        </svg>
                         <span>Customers</span>
-                        <img src="./images/svg/arrow.svg" alt="Show more">
+                        <svg class="header__icon arrow" width="16" height="16">
+                            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                        </svg>
                     </a>
                 </li>
                 <li class="header__nav">
                     <a href="#4" class="header__item">
-                        <img src="./images/svg/income.svg" alt="Income">
+                        <svg class="header__icon" width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-income"></use>
+                        </svg>
                         <span>Income</span>
-                        <img src="./images/svg/arrow.svg" alt="Show more">
+                        <svg class="header__icon arrow" width="16" height="16">
+                            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                        </svg>
                     </a>
                 </li>
                 <li class="header__nav">
                     <a href="#5" class="header__item">
-                        <img src="./images/svg/promote.svg" alt="Promote">
+                        <svg class="header__icon" width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-promote"></use>
+                        </svg>
                         <span>Promote</span>
-                        <img src="./images/svg/arrow.svg" alt="Show more">
+                        <svg class="header__icon arrow" width="16" height="16">
+                            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                        </svg>
                     </a>
                 </li>
                 <li class="header__nav">
                     <a href="#6" class="header__item">
-                        <img src="./images/svg/help.svg" alt="Help">
+                        <svg class="header__icon" width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-help"></use>
+                        </svg>
                         <span>Help</span>
-                        <img src="./images/svg/arrow.svg" alt="Show more">
+                        <svg class="header__icon arrow" width="16" height="16">
+                            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                        </svg>
                     </a>
                 </li>
             </ul>
         </nav>
-    </div>
-</header>
+    
+</header> 
 
 <!-- Основна секція -->
 <main class="main">

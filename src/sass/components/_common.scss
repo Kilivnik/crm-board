@@ -1,5 +1,6 @@
 html,
 body {
+    box-sizing: border-box;
     height: 100%;
     font-family: $fonts;
     background-color: #ffffff;
@@ -13,7 +14,7 @@ body {
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 // img {
