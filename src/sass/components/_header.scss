@@ -2,7 +2,8 @@
 
 .header__container {
     outline: $inactive-color solid 3px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     // position: relative;
     // text-align: center;
     // justify-content: center;
@@ -68,7 +69,6 @@
         display: flex;
             align-items: baseline;
         margin-left: 8px;
-        margin-right: 4px;
         font-size: 26px;
             font-weight: 500;
             letter-spacing: 1%;
@@ -84,6 +84,7 @@
                 font-weight: 500;
                 color: #838383;
                 letter-spacing: -1%;
+                margin-left: 4px;
         }
 }
 
@@ -174,3 +175,20 @@
 
 
 /*  #endregion  */
+
+.pagination__block {
+    display: flex;
+    align-items: center;
+}
+
+.pagination {
+    // display: inline-block;
+    display: flex;
+    margin-left: auto;
+}
+
+.pagination li {
+    width: 25px;
+    float: left;
+
+}
