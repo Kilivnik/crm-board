@@ -20,14 +20,12 @@
     }
 
     @media (min-width: $min-tablet) {
-        max-width: 305px;
-        padding: 48px 27px;
+        max-width: 306px;
+            padding-top: 48px;
+            padding-left: 27px;
+            padding-right: 29px;
     }
 
-    @media (min-width: $min-desktop) {
-        min-width: 306px;
-        
-    }
 }
 
 /*  #endregion  */
@@ -57,7 +55,7 @@
 
     
     // z-index: 1000;
-    @media screen and (min-width: $min-desktop) {
+    @media screen and (min-width: $min-tablet) {
         justify-content: normal;
     }
 }
@@ -117,7 +115,7 @@
 
 .header__nav {
     outline: $inactive-color solid 3px;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
     
 }
 
@@ -176,19 +174,79 @@
 
 /*  #endregion  */
 
+.main__section {
+    padding-top: 41px;
+    padding-left: 71px;
+}
+
+.section__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 51px;
+}
+
+.section__customers {
+    background-color: #fff;
+    border-radius: 30px;
+        padding-top: 30px;
+        padding-right: 44px;
+        padding-left: 38px;
+}
+
+.all__customers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        padding-right: 9px;
+}
+
+.all__customers h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: $secondary-black-text;
+    margin-bottom: 7px;
+}
+
+.all__customers p {
+    font-size: 14px;
+    color: $green-color;
+}
+
+.customers__form {
+    position: relative;
+}
+
+.customers__input {
+    width: 216px;
+    height: 38px;
+        border: 1px solid #E7E7E7;
+        border-radius: 10px;
+        background-color: #F9FBFF;
+}
+
+.form__btn {
+    // background-color: rgba(0, 0, 0, 0);
+    //     border-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+}
+
 .pagination__block {
     display: flex;
     align-items: center;
 }
 
 .pagination {
-    // display: inline-block;
     display: flex;
     margin-left: auto;
 }
 
 .pagination li {
-    width: 25px;
     float: left;
+}
 
+.pagination__item {
+    width: 25px;
 }

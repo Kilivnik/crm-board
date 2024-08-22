@@ -3,7 +3,7 @@ body {
     box-sizing: border-box;
     height: 100%;
     font-family: $fonts;
-    background-color: #ffffff;
+    background-color: #FAFBFF;
     font-family: "Poppins",sans-serif;
 
     &.scroll-hidden {
@@ -45,4 +45,8 @@ li {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.wrapper {
+    display: flex;
 }
