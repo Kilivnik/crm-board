@@ -72,7 +72,9 @@
 /*  #endregion */
 
 /*  #region Nav  */
-
+.nav__wrapper {
+    position: relative;
+}
 .header__nav {
     margin-bottom: 18px; 
 }
@@ -135,8 +137,9 @@
 
 .header__developer {
     display: flex;
-    // position: fixed;
-    // bottom: 5%;
+    position: absolute;
+        left: 0;
+        bottom: -100%;
 }
 
 .header__developer img {
@@ -188,8 +191,8 @@
             padding-right: 10px;
     
     }
-        @media (min-width: $min-tablet) {
-            // width: 968px;
+        @media (min-width: $min-desktop) {
+            width: 968px;
                 padding-top: 41px;
                 padding-left: 71px;
                 padding-right: 95px;
@@ -198,9 +201,6 @@
     
 
 }
-
-
-
 
 .section__title {
     font-size: 24px;
@@ -271,13 +271,13 @@
 
 table {
     border-collapse: collapse;
-    border: 1px solid #2a2a2a;
     // table-layout: fixed;
 }
 
 table th,
 table td {
     padding: 20px;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 table th {
