@@ -1,18 +1,13 @@
 /*  #region menu  */
 
 .header__container {
-    outline: $inactive-color solid 3px;
-    display: flex;
-    flex-direction: column;
-    // position: relative;
-    // text-align: center;
-    // justify-content: center;
-    // margin-left: auto;
-    // margin-right: auto;
-    // display: flex;
-    // flex-direction: column;
-    
     height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;  
+    overflow-x: hidden;
+    
     background-color: #FFFFFF;
 
     @media (min-width: $min-mobile) {
@@ -21,11 +16,10 @@
 
     @media (min-width: $min-tablet) {
         max-width: 306px;
-            padding-top: 48px;
-            padding-left: 27px;
-            padding-right: 29px;
+        padding-top: 48px;
+        padding-left: 27px;
+        padding-right: 29px;
     }
-
 }
 
 /*  #endregion  */
@@ -33,8 +27,6 @@
 /*  #region Logo  */
 
 .header__logo {
-    
-    outline: $violet-color solid 3px;
     font-size: 26px;
     font-weight: 600;
     letter-spacing: 1%;
@@ -46,15 +38,6 @@
 
     margin-bottom: 64px;
 
-    // position: fixed;
-    // top: 0;
-    // left: 0; 
-    // width: 15%;
-    // text-align: center;
-    
-
-    
-    // z-index: 1000;
     @media screen and (min-width: $min-tablet) {
         justify-content: normal;
     }
@@ -90,38 +73,20 @@
 
 /*  #region Nav  */
 
-.nav__wrapper {
-    outline: $inactive-color solid 3px;
-    // position: fixed;
-    // left: 0;
-    // text-align: center;
-    // width: 15%;
-    // height: 90%;
-    // z-index: 100;
-}
-
-// .header__list {
-//     margin: auto;
-//     position: relative;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     height: 70%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-around;
-
-// }
-
 .header__nav {
-    outline: $inactive-color solid 3px;
-    margin-bottom: 18px;
-    
+    margin-bottom: 18px; 
 }
 
 .header__nav:last-child {
     margin-bottom: 0;
 }
+
+// .header__developer {
+//     margin-bottom: 50px;
+//     @media screen and (min-width: $min-tablet) {
+//             margin-bottom: 76px;
+//         }
+// }
 
 .header__item {
     display: flex;
@@ -131,8 +96,8 @@
     position: relative;
 
     font-size: 14px;
-            font-weight: 400;
-            letter-spacing: -1%;
+    font-weight: 400;
+    letter-spacing: -1%;
 
     color: $gray-text;
     background-color: inherit;
@@ -149,8 +114,6 @@
                 fill: #FFFFFF;
             }
         }
-
-     
 }
 
 .header__icon {
@@ -170,16 +133,74 @@
 }
 
 
+.header__developer {
+    display: flex;
+    // position: fixed;
+    // bottom: 5%;
+}
 
+.header__developer img {
+    margin-right: 12px;
+}
+
+.header__developer h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondary-black-text;
+}
+
+.header__developer p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #757575;
+}
 
 /*  #endregion  */
 
-.main__section {
-    padding-top: 41px;
-    padding-left: 71px;
-    padding-right: 95px;
-    // width: 968px;
+/*  #region Main  */
+
+.section {
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    
+    @media (min-width: $min-mobile) {
+            margin-left: 200px;
+        }
+    
+        @media (min-width: $min-tablet) {
+            margin-left: 306px;
+            
+        }
 }
+
+.main__section {
+
+    @media (min-width: $min-mobile) {
+            padding-top: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    
+    @media (min-width: $min-tablet) {
+            padding-top: 25px;
+            padding-left: 10px;
+            padding-right: 10px;
+    
+    }
+        @media (min-width: $min-tablet) {
+            // width: 968px;
+                padding-top: 41px;
+                padding-left: 71px;
+                padding-right: 95px;
+    
+        }
+    
+
+}
+
+
+
 
 .section__title {
     font-size: 24px;
@@ -188,19 +209,19 @@
 }
 
 .section__customers {
+    padding-top: 30px;
+    padding-right: 44px;
+    padding-left: 38px;
     background-color: #fff;
-    border-radius: 30px;
-        padding-top: 30px;
-        padding-right: 44px;
-        padding-left: 38px;
+    border-radius: 30px;    
 }
 
 .all__customers {
     display: flex;
     justify-content: space-between;
     align-items: center;
-        padding-right: 9px;
-        margin-bottom: 40px;
+    padding-right: 9px;
+    margin-bottom: 40px;
 }
 
 .all__customers h3 {
@@ -219,31 +240,29 @@
     position: relative;
 }
 
-
-
 .customers__input {
     width: 216px;
     height: 38px;
     padding-left: 40px;
     padding-top: 10px;
-        padding-bottom: 10px;
-        border: 1px solid #E7E7E7;
-        border-radius: 10px;
-        background-color: #F9FBFF;
-        font-size: 12px;
-            color: $secondary-gray-text;
+    padding-bottom: 10px;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+    background-color: #F9FBFF;
+    font-size: 12px;
+    color: $secondary-gray-text;
 }
 
 .form__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 8px;
     background-color: #0000;
-        border: none;
-        outline: none;
-        margin-right: 3px;
-        margin-left: 8px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 0;
+    border: none;
+    outline: none;   
 }
 
 .table__customers {
@@ -253,28 +272,39 @@
 table {
     border-collapse: collapse;
     border: 1px solid #2a2a2a;
-        table-layout: fixed;
+    // table-layout: fixed;
+}
+
+table th,
+table td {
+    padding: 20px;
 }
 
 table th {
     padding-bottom: 14px;
     font-size: 14px;
-        color: $secondary-gray-text;
-        font-weight: 500;
-
+    font-weight: 500;
+    color: $secondary-gray-text;
 }
+
 table td {
     padding-bottom: 24px;
-        padding-top: 24px;
-        font-size: 14px;
-            color: $black-text;
-            font-weight: 500;
+    padding-top: 24px;
+    font-size: 14px;
+    color: $black-text;
+    font-weight: 500;
     
 }
 
 .pagination__block {
     display: flex;
     align-items: center;
+}
+
+.pagination__block p {
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondary-gray-text;
 }
 
 .pagination {
@@ -289,3 +319,5 @@ table td {
 .pagination__item {
     width: 25px;
 }
+
+/*  #endregion  */
