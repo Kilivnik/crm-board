@@ -15,10 +15,10 @@
     }
 
     @media (min-width: $min-tablet) {
-        max-width: 306px;
-        padding-top: 48px;
-        padding-left: 27px;
-        padding-right: 29px;
+        min-width: 306px;
+            padding-top: 36px;
+            padding-left: 26px;
+            padding-right: 30px;
     }
 }
 
@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 64px;
+    margin-bottom: 43px;
 
     @media screen and (min-width: $min-tablet) {
         justify-content: normal;
@@ -192,10 +192,10 @@
     
     }
         @media (min-width: $min-desktop) {
-            width: 968px;
+            // width: 968px;
                 padding-top: 41px;
-                padding-left: 71px;
-                padding-right: 95px;
+                padding-left: 69px;
+                // padding-right: 95px;
     
         }
     
@@ -213,7 +213,8 @@
     padding-right: 44px;
     padding-left: 38px;
     background-color: #fff;
-    border-radius: 30px;    
+    border-radius: 30px;  
+    min-width: 968px;
 }
 
 .all__customers {
@@ -278,6 +279,17 @@ table th,
 table td {
     padding: 20px;
     border-bottom: 1px solid #EEEEEE;
+    text-align: start;
+}
+
+table th:last-child,
+table td:last-child {
+    text-align: center;
+}
+
+table th:first-child,
+table td:first-child {
+    padding-left: 0;
 }
 
 table th {
@@ -288,12 +300,36 @@ table th {
 }
 
 table td {
-    padding-bottom: 24px;
-    padding-top: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 14px;
     color: $black-text;
     font-weight: 500;
     
+}
+
+.status__brn {
+    display: block;
+    text-align: center;
+    min-width: 80px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.active {
+    color: $active-color;
+    background-color: $green-color;
+    border-color: $active-color;
+}
+
+.inactive {
+    color: $inactive-color;
+    background-color: $secondary-inactive-color;
+    border-color: $inactive-color;
 }
 
 .pagination__block {
@@ -312,12 +348,30 @@ table td {
     margin-left: auto;
 }
 
+.pagination__list {
+    display: inline-block;
+}
+
 .pagination li {
     float: left;
+
+    // float: left;
+    //     display: inline-block;
+        
+}
+
+.pagination li + li {
+    margin-left: 12px;
 }
 
 .pagination__item {
-    width: 25px;
+    text-align: center;
+        min-width: 25px;
+        color: $pagination-text-color;
+        background-color: $pagination-color;
+        border: 1px solid #b5b7c0;
+        border-radius: 4px;
+        padding: 6px 9px;
 }
 
 /*  #endregion  */
