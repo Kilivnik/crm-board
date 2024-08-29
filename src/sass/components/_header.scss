@@ -19,7 +19,8 @@
     }
 
     @media (min-width: $min-tablet) {
-        min-width: 306px;
+        max-width: 306px;
+        flex-basis: 306px;
             padding-top: 36px;
             padding-left: 26px;
             padding-right: 30px;
@@ -110,7 +111,7 @@
     background-color: inherit;
     border-radius: 8px;
 
-
+    transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
     &:focus,
     &:hover {
         color: #FFFFFF;
@@ -171,6 +172,7 @@
     width: 100%;
     max-height: 100vh;
     display: flex;
+    flex-grow: 1;
     
     @media (min-width: $min-mobile) {
             margin-left: 200px;
@@ -258,6 +260,11 @@
     background-color: #F9FBFF;
     font-size: 12px;
     color: $secondary-gray-text;
+
+    &:focus,
+    &:hover {
+        border: 1px solid $secondary-gray-text;
+    }    
 }
 
 .form__btn {
@@ -331,12 +338,24 @@ table td {
     color: $active-color;
     background-color: $green-color;
     border-color: $active-color;
+    &:focus,
+    &:hover {
+        color: $green-color;
+        background-color: $active-color;
+        border-color: $green-color;
+    }
 }
 
 .inactive {
     color: $inactive-color;
     background-color: $secondary-inactive-color;
     border-color: $inactive-color;
+    &:focus,
+    &:hover {
+        color: $secondary-inactive-color;
+        background-color: $inactive-color;
+        border-color: $secondary-inactive-color;
+    }
 }
 
 .pagination__block {
@@ -378,6 +397,8 @@ table td {
     border-radius: 4px;
     padding: 6px 9px;
 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
         &:focus,
         &:hover {
             // fill: #FFFFFF;
@@ -389,6 +410,8 @@ table td {
 .pagination__item a {
     color: $pagination-text-color;
     fill: $pagination-text-color;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:focus,
         &:hover {
             fill: #FFFFFF;
