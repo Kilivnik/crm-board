@@ -1,6 +1,10 @@
 /*  #region menu  */
 
 .header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     height: 100%;
     position: fixed;
     top: 0;
@@ -19,6 +23,7 @@
             padding-top: 36px;
             padding-left: 26px;
             padding-right: 30px;
+            padding-bottom: 76px;
     }
 }
 
@@ -137,9 +142,9 @@
 
 .header__developer {
     display: flex;
-    position: absolute;
-        left: 0;
-        bottom: -100%;
+    // position: absolute;
+    //     left: 0;
+    //     bottom: -100%;
 }
 
 .header__developer img {
@@ -209,12 +214,9 @@
 }
 
 .section__customers {
-    padding-top: 30px;
-    padding-right: 44px;
-    padding-left: 38px;
     background-color: #fff;
     border-radius: 30px;  
-    min-width: 968px;
+    max-width: 968px;
 }
 
 .all__customers {
@@ -223,6 +225,10 @@
     align-items: center;
     padding-right: 9px;
     margin-bottom: 40px;
+
+    padding-top: 30px;
+        padding-left: 38px;
+        padding-right: 53px;
 }
 
 .all__customers h3 {
@@ -272,7 +278,6 @@
 
 table {
     border-collapse: collapse;
-    // table-layout: fixed;
 }
 
 table th,
@@ -285,14 +290,16 @@ table td {
 table th:last-child,
 table td:last-child {
     text-align: center;
+    padding-right: 44px;
 }
 
 table th:first-child,
 table td:first-child {
-    padding-left: 0;
+    padding-left: 38px;
 }
 
 table th {
+    padding-top: 0;
     padding-bottom: 14px;
     font-size: 14px;
     font-weight: 500;
@@ -335,6 +342,9 @@ table td {
 .pagination__block {
     display: flex;
     align-items: center;
+    padding-left: 38px;
+    padding-bottom: 41px;
+    padding-right: 40px;
 }
 
 .pagination__block p {
@@ -354,10 +364,6 @@ table td {
 
 .pagination li {
     float: left;
-
-    // float: left;
-    //     display: inline-block;
-        
 }
 
 .pagination li + li {
@@ -366,12 +372,29 @@ table td {
 
 .pagination__item {
     text-align: center;
-        min-width: 25px;
-        color: $pagination-text-color;
-        background-color: $pagination-color;
-        border: 1px solid #b5b7c0;
-        border-radius: 4px;
-        padding: 6px 9px;
+    min-width: 25px;
+    background-color: $pagination-color;
+    border: 1px solid #b5b7c0;
+    border-radius: 4px;
+    padding: 6px 9px;
+
+        &:focus,
+        &:hover {
+            // fill: #FFFFFF;
+            // color: #FFFFFF;
+            background-color: $violet-color;
+        }
+}
+
+.pagination__item a {
+    color: $pagination-text-color;
+    fill: $pagination-text-color;
+    &:focus,
+        &:hover {
+            fill: #FFFFFF;
+            color: #FFFFFF;
+            
+        }
 }
 
 /*  #endregion  */
