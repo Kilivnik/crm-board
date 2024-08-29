@@ -1,0 +1,263 @@
+/*  #region Main  */
+
+.main {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    max-height: 100vh;
+
+
+    @media (min-width: $min-mobile) {
+        margin-left: 200px;
+        overflow-x: auto;
+    }
+
+    @media (min-width: $min-tablet) {
+        margin-left: 306px;
+    }
+}
+
+.main__section {
+    display: none;
+}
+
+.main__section.is-active {
+    display: block;
+
+    @media (min-width: $min-mobile) {
+        padding-top: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    @media (min-width: $min-tablet) {
+        padding-top: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+
+    }
+
+    @media (min-width: $min-desktop) {
+        padding-top: 41px;
+        padding-left: 69px;
+    }
+
+
+}
+
+.section__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 51px;
+}
+
+.section__customers {
+    min-width: 968px;
+
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.all__customers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 40px;
+    padding-right: 9px;
+    padding-top: 30px;
+    padding-left: 38px;
+    padding-right: 53px;
+}
+
+.all__customers h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: $secondary-black-text;
+    margin-bottom: 7px;
+}
+
+.all__customers p {
+    font-size: 14px;
+    color: $green-color;
+}
+
+.form__wrap {
+    position: relative;
+}
+
+.customers__input {
+    width: 216px;
+    height: 38px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+
+    font-size: 12px;
+    color: $secondary-gray-text;
+    background-color: #F9FBFF;
+
+    &:focus,
+    &:hover {
+        border: 1px solid $secondary-gray-text;
+    }
+}
+
+.form__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 8px;
+    background-color: #0000;
+    border: none;
+    outline: none;
+}
+
+.table__customers {
+    margin-bottom: 32px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    text-align: start;
+}
+
+table th:last-child,
+table td:last-child {
+    text-align: center;
+    padding-right: 44px;
+}
+
+table th:first-child,
+table td:first-child {
+    padding-left: 38px;
+}
+
+table th {
+    padding-top: 0;
+    padding-bottom: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondary-gray-text;
+}
+
+table td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: $black-text;
+    font-weight: 500;
+
+}
+
+.status__brn {
+    display: block;
+    text-align: center;
+    min-width: 80px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.active {
+    color: $active-color;
+    background-color: $green-color;
+    border-color: $active-color;
+
+    &:focus,
+    &:hover {
+        color: $green-color;
+        background-color: $active-color;
+        border-color: $green-color;
+    }
+}
+
+.inactive {
+    color: $inactive-color;
+    background-color: $secondary-inactive-color;
+    border-color: $inactive-color;
+
+    &:focus,
+    &:hover {
+        color: $secondary-inactive-color;
+        background-color: $inactive-color;
+        border-color: $secondary-inactive-color;
+    }
+}
+
+.pagination__block {
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+    padding-bottom: 41px;
+    padding-right: 40px;
+}
+
+.pagination__block p {
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondary-gray-text;
+}
+
+.pagination {
+    display: flex;
+    margin-left: auto;
+}
+
+.pagination__list {
+    display: inline-block;
+}
+
+.pagination li {
+    float: left;
+}
+
+.pagination li+li {
+    margin-left: 12px;
+}
+
+.pagination__item {
+    text-align: center;
+    min-width: 25px;
+    background-color: $pagination-color;
+    border: 1px solid #b5b7c0;
+    border-radius: 4px;
+    padding: 6px 9px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+        background-color: $violet-color;
+    }
+}
+
+.pagination__item a {
+    color: $pagination-text-color;
+    fill: $pagination-text-color;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+        fill: #FFFFFF;
+        color: #FFFFFF;
+
+    }
+}
+
+/*  #endregion  */
